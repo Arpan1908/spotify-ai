@@ -66,7 +66,7 @@ def login_spotify():
     if "code" in query_params:
         return query_params["code"][0]
 
-     st.markdown(
+    st.markdown(
         f"Please [log in to Spotify]({auth_url}) to continue",
         unsafe_allow_html=True,
     )
