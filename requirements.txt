@@ -1,0 +1,6 @@
+openai
+spotipy
+python-dotenv
+streamlit
+requests
+google-generativeai
