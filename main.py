@@ -67,7 +67,26 @@ def login_spotify():
         return query_params["code"][0]
 
     st.markdown(
-        f"Please [log in to Spotify]({auth_url}) to continue",
+        f"""
+        <div style="display: flex; justify-content: center; margin: 20px 0;">
+            <a href="{auth_url}" target="_self" style="
+                display: inline-block;
+                background-color: #1DB954;
+                color: white;
+                padding: 12px 24px;
+                text-decoration: none;
+                border-radius: 25px;
+                font-weight: bold;
+                text-align: center;
+                transition: background-color 0.3s;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/spotify-36-721973.png" 
+                         style="width: 24px; height: 24px;">
+                    Connect with Spotify
+                </div>
+            </a>
+        </div>
+        """,
         unsafe_allow_html=True,
     )
     return None
