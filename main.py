@@ -29,7 +29,7 @@ def get_spotify_client(_authorization_code):
             data={
                 "grant_type": "authorization_code",
                 "code": _authorization_code,
-                "redirect_uri": "http://localhost:8501",
+                "redirect_uri": "https://spotify-ai.streamlit.app",
                 "client_id": os.environ.get("SPOTIFY_CLIENT_ID"),
                 "client_secret": os.environ.get("SPOTIFY_CLIENT_SECRET"),
             },
@@ -53,7 +53,7 @@ def login_spotify():
         st.error("Please set SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET in your environment variables")
         st.stop()
 
-    redirect_uri = "http://localhost:8501"
+    redirect_uri = "https://spotify-ai.streamlit.app"
     auth_url = (
         "https://accounts.spotify.com/authorize"
         f"?client_id={os.environ['SPOTIFY_CLIENT_ID']}"
